@@ -3,10 +3,22 @@
 #include <time.h>
 #include <unistd.h> // For ssize_t on POSIX systems
 
-
+/*
 #define TICK(X) clock_t X = clock()
 #define TOCK(X) printf("time %s: %g sec.\n", (#X), (double)(clock() - (X)) / CLOCKS_PER_SEC)
-#define CHUNK_SIZE 1024 * 1024  
+*/
+
+#define TICK(X) struct timespec X; clock_gettime(CLOCK_MONOTONIC, &X)
+#define TOCK(X) do { \
+    struct timespec _end; \
+    clock_gettime(CLOCK_MONOTONIC, &_end); \
+    double _elapsed = (_end.tv_sec - (X).tv_sec) + \
+                      (_end.tv_nsec - (X).tv_nsec) / 1e9; \
+    printf("time %s: %g sec.\n", #X, _elapsed); \
+} while(0);
+
+#define CHUNK_SIZE 1024 * 1024 * 4  // 1 MB      
+
 
 void read_whole_file(const char *filename);
 void read_file_in_chunks(const char *filename);
