@@ -15,5 +15,12 @@ Reading in chunks is the most efficient method:
 Avg time: Around 1.4 seconds 
 Chunk size: 1024 
 
+The above ideas are wrong after careful research it turns out that reading the FastQ files line by line is the most efficient method.
+Which is also how is done in the original FastQC implementation in Java using bufferedreader() which has similar performance with getline() in C.
+
+Now we need to be able to also read a zip file 
+Next we should be able to get the file from stdin.
+
+
 
 
