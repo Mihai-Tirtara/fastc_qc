@@ -5,6 +5,7 @@ build/
 *.exe
 *.obj
 a.out
+run
 main
 
 # Output files
