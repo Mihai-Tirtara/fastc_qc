@@ -8,6 +8,7 @@ FastQC it's a tool for generating quality control values for DNA or RNA sequence
 - [x] ~~Parse 1 FastQ file~~  
 - [ ] Parse Zipped FastQ file   
 - [ ] Create data structure to hold the reads   
+- [x] Add CLI support to pass the files through the command line    
 - [ ] Generate text output with basic statistics including file name,  Encoding of quality values type, total number of sequences, sequence length, %GC content   
 - [ ]  Generate plot with Per Base Sequence Quality(you need to convert the quality values from asci to numerical )
 
@@ -32,7 +33,7 @@ This file will have the following methods:
 - GenerateBasicStatistics (will return a text output with all the information)  
 - GetEncodingQualityType (will return which ASCII encoding of quality values was found in this file)  
 - GetTotalNumberSequences (will return the total number of sequences found in the file)   
-- GetSequenceLength (will return length of the shortest and longest sequence in the  
+- GetSequenceLength (will return length of the shortest and longest sequence in the ) 
 - set. If all sequences are the same length only one value is reported.\\  
 - GetGCPercent (will return the overall %GC of all bases in all sequences)
 

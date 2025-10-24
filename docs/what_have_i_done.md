@@ -18,8 +18,13 @@ Chunk size: 1024
 The above ideas are wrong after careful research it turns out that reading the FastQ files line by line is the most efficient method.
 Which is also how is done in the original FastQC implementation in Java using bufferedreader() which has similar performance with getline() in C.
 
+
+Now we are able to read the filename from the command line:
+At the moment we are just using the basic implementation of argc with argv later when add more options flags we will swithc to get_opt()
+
+
 Now we need to be able to also read a zip file 
-Next we should be able to get the file from stdin.
+
 
 
 

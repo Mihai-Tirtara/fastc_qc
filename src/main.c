@@ -4,9 +4,15 @@
 
 void read_file_line_by_line(const char *filename);
 
-int main() {
+int main(int argc, char *argv[]) {
     printf("Hello, World!\n");
-    read_file_line_by_line("/home/mihai/fastq_data/SRR062634_1.fastq");
+    if(argc > 1) {
+        read_file_line_by_line(argv[1]);
+        return 0;
+    }
+    else {
+        printf("Please provide a filename as an argument.\n");
+    }
     return 0;
 }
 

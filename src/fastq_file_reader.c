@@ -20,5 +20,6 @@ void read_file_line_by_line(const char *filename) {
 
     free(line);
     fclose(file);
+    printf("Finished reading file: %s\n", filename);
 
 }
