@@ -1,0 +1,36 @@
+# Build artifacts
+build/
+*.o
+*.out
+*.exe
+*.obj
+a.out
+run
+main
+
+# Output files
+outputfile
+*.fastq.qc
+*.log
+*.tmp
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# Dependency files
+*.d
+*.dep
