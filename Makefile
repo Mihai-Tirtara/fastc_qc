@@ -8,7 +8,7 @@ OBJECTS := $(patsubst $(SRCDIR)/%,$(BUILDDIR)/%,$(SOURCES:.$(SRCEXT)=.o))
 
 # Compiler flags
 CFLAGS := -Wall -Wextra -std=c11 -MMD -MP
-LIB := -L lib
+LIB := -L lib -lz
 INC := -I include
 
 # Debug vs Release build
